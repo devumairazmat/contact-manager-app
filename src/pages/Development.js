@@ -17,7 +17,7 @@ function Development() {
       <button onClick={toogle}>Toogle Time & Date</button>
      {flag ? <Time /> : "Date and Time Disabled"} 
       </h5>
-      <h3>Comig Soon. Thanks For Your Patience</h3> 
+      <h3>Coming Soon. Thanks For Your Patience</h3> 
     </>
   );
 } 
