@@ -2,7 +2,7 @@ import "./App.css";
 // import Form from "./components/form/Form";
 // import LoginControl from "./components/loginControl/LoginControl";
 // import Comments from "./pages/Comments";
-// import Development from "./pages/Development";
+import Development from "./pages/Development";
 import SearchBar from "./pages/SearchBar";
 
 function App() {
@@ -19,13 +19,28 @@ function App() {
   //   },
   //   {
   //     id: 3,
-  //     name: "Techlose",
+  //     name: "Techloset",
   //     comment: "Great Application",
-  //   }
+  //   },
+  //   {
+  //       id: 4,
+  //       name: "Step Up IT Solutions",
+  //       comment: "Keep It Up",
+  //     },
+  //     {
+  //       id: 5,
+  //       name: "GCUF SE Head",
+  //       comment: "Happy to See Umair Keep Shining",
+  //     },
+  //     {
+  //       id: 6,
+  //       name: "Saylani IT Solutions",
+  //       comment: "Our Proud and Pride",
+  //     }
   // ]
   return (
     <>
-      {/* <Development /> */}
+      <Development />
       {/* <LoginControl/> */}
       {/* <Comments comment={comment} /> */}
       {/* <Form/> */}
