@@ -1,8 +1,8 @@
 import "./App.css";
 // import Form from "./components/form/Form";
-// import LoginControl from "./components/loginControl/LoginControl";
+import LoginControl from "./components/loginControl/LoginControl";
 // import Comments from "./pages/Comments";
-// import Development from "./pages/Development";
+import Development from "./pages/Development";
 import SearchBar from "./pages/SearchBar";
 
 function App() {
@@ -25,8 +25,8 @@ function App() {
   // ]
   return (
     <>
-      {/* <Development /> */}
-      {/* <LoginControl/> */}
+      <Development />
+      <LoginControl/>
       {/* <Comments comment={comment} /> */}
       {/* <Form/> */}
       <SearchBar/>
