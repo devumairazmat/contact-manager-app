@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Search() {
+function Search({searchTerm,handleSearch}) {
+    
   return (
-    <div>Search</div>
+    <div>
+        <label htmlFor="search">Search: </label>
+        <input type="text" placeholder="Search" value={searchTerm} 
+        onChange={handleSearch}  />
+    </div>
   )
 }
 

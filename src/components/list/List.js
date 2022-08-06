@@ -1,8 +1,12 @@
 import React from 'react'
 
-function List() {
+function List({list}) {
   return (
-    <div>List</div>
+    <ul>
+        {list.map(item => {
+            return <li key={item.id}>{item.name}</li>
+        })}
+    </ul>
   )
 }
 
