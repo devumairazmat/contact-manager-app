@@ -7,9 +7,9 @@ export default class AddContact extends Component {
   render() {
     return (
         <>
-        <hr/>
+       
       <Container>
-        <h1 className="text-center">Add Contact Here</h1> 
+        <h3 className="text-center">Add Contact Here</h3> 
         <hr/>
         <Form>
           <Form.Group className="mb-3" controlId="Name">
