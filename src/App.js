@@ -1,9 +1,13 @@
+import React from 'react';
 import "./App.css";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import Form from "./components/form/Form";
-import LoginControl from "./components/loginControl/LoginControl";
+// import LoginControl from "./components/loginControl/LoginControl";
 // import Comments from "./pages/Comments";
-import Development from "./pages/Development";
-import SearchBar from "./pages/SearchBar";
+// import Development from "./pages/Development";
+import Contact from "./pages/Contact";
+// import SearchBar from "./pages/SearchBar";
 
 function App() {
   // const comment = [
@@ -40,11 +44,12 @@ function App() {
   // ]
   return (
     <>
-      <Development />
-      <LoginControl/>
+      {/* <Development /> */}
+      <Contact/>  
+      {/* <LoginControl/> */}
       {/* <Comments comment={comment} /> */}
       {/* <Form/> */}
-      <SearchBar/>
+      {/* <SearchBar/> */}
     </>
   );
 }
