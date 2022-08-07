@@ -8,16 +8,16 @@ import Header from "../components/header/Header";
 function Contact() {
     const contact = [
         {
-            id: 1,
+            id: "1",
             name: "John Doe",
             email: "john.doe@gmail.com",
-            phone: "123-456-7890"
+            phone: "123456890"
         },
         {
-            id: 2,
+            id: "2",
             name: "Dev Umair",
             email: "umair@gmail.com",
-            phone: "+92123-456-7890"
+            phone: "123456890"
         }
     ]
   return (
