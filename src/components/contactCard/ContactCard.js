@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTrashAlt,FaRegEdit } from "react-icons/fa";
+import { FaTrashAlt,FaRegEdit ,FaUserCircle} from "react-icons/fa";
 import Table from "react-bootstrap/Table";
 
 const ContactCard = (props) => {
@@ -10,8 +10,8 @@ const ContactCard = (props) => {
     <Table>
      <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
+          <th>Id</th>
+          <th>Name</th>
           <th>Email</th>
           <th>Phone no</th>
           <th>Edit/Delete</th>
@@ -21,10 +21,10 @@ const ContactCard = (props) => {
         <tbody>
           <tr>
             <td>{id}</td>
-            <td>{name}</td>
+            <td><FaUserCircle className="m-1 mb-2" height={"48px"} width={"32px"} />{name}</td>
             <td>{email}</td>
             <td>{phone}</td>
-            <td><FaTrashAlt/> <FaRegEdit className="mx-2"/></td>
+            <td><FaTrashAlt style={{color: 'red'}} onClick={() => props.clickHandler(id)}/> <FaRegEdit className="mx-2"/></td>
           </tr>
         </tbody>
       </Table>
