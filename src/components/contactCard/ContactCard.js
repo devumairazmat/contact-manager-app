@@ -24,7 +24,7 @@ const ContactCard = (props) => {
             <td><FaUserCircle className="m-1 mb-2" height={"48px"} width={"32px"} />{name}</td>
             <td>{email}</td>
             <td>{phone}</td>
-            <td><FaTrashAlt/> <FaRegEdit className="mx-2"/></td>
+            <td><FaTrashAlt style={{color: 'red'}} onClick={() => props.clickHandler(id)}/> <FaRegEdit className="mx-2"/></td>
           </tr>
         </tbody>
       </Table>
