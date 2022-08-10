@@ -10,8 +10,8 @@ const ContactCard = (props) => {
     <Table>
      <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
+          <th>Id</th>
+          <th>Name</th>
           <th>Email</th>
           <th>Phone no</th>
           <th>Edit/Delete</th>

@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 
 export default class AddContact extends Component {
   state = {
+    
     name: " ",
     phone: " ",
     email: " ",
@@ -19,7 +20,8 @@ export default class AddContact extends Component {
     ) {
       alert("Please fill all the fields");
     } else {
-      this.props.addContactHandler(this.state);
+      this.props.addContactHandler(this.state)
+      this.setState({ name: " ", phone: " ", email: " " });
       console.log(this.state);
     }
   };
