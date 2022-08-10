@@ -28,8 +28,8 @@ function Contact() {
     setContacts([...contacts, response.data]);
   };
 
-  const removeContactHandler = (id) => {
-    
+  const removeContactHandler = async (id) => {
+    await api.delete(`/contacts/${id}`);
     const newConactList = contacts.filter((contact) => {
       return contact.id !== id;
     });
