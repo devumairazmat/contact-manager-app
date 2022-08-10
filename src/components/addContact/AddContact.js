@@ -5,7 +5,6 @@ import Form from "react-bootstrap/Form";
 
 export default class AddContact extends Component {
   state = {
-    
     name: " ",
     phone: " ",
     email: " ",

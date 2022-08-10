@@ -1,0 +1,12 @@
+1 npm init --yes
+2 npm install --save json-server
+3 make file of db.json
+4 "start": "json-server -p 3006 -w db.json " add at test in json file
+5 npm install --save axios
+6 make api folder --  > .js file 
+7 import axios from "axios";
+8 export default axios.create(
+    {
+        baseURL: "http://localhost:3006/"
+    }
+)

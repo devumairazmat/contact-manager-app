@@ -1,7 +1,6 @@
 import React from "react";
 import { FaTrashAlt, FaRegEdit, FaUserCircle } from "react-icons/fa";
 import Table from "react-bootstrap/Table";
-import { Link } from "react-router-dom";
 
 const ContactCard = (props) => {
   // console.log(props);
