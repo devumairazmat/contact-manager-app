@@ -3,10 +3,10 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-class AddContact extends React.Component {
-  state = { name: " ", phone: " ", email: " " };
+class EditContact extends React.Component {
+ 
 
-  add = (e) => {
+  update = (e) => {
     e.preventDefault();
     if (
       this.state.name === " " ||
@@ -15,8 +15,8 @@ class AddContact extends React.Component {
     ) {
       alert("Please fill all the fields");
     } else {
-      this.props.addContactHandler(this.state);
-      this.setState({ name: " ", phone: " ", email: " " });
+      this.props.updateContactHandler(this.state);
+      this.props.history.push("/");
       console.log(this.state);
     }
   };
@@ -25,9 +25,9 @@ class AddContact extends React.Component {
     return (
       <>
         <Container>
-          <h3 className="text-center">Add Contact Here</h3>
+          <h3 className="text-center">Edit Contact Here</h3>
           <hr />
-          <Form onSubmit={this.add}>
+          <Form onSubmit={this.update}>
             <Form.Group className="mb-3" controlId="Name">
               <Form.Label>Enter Name :</Form.Label>
               <Form.Control
@@ -53,7 +53,7 @@ class AddContact extends React.Component {
               />
             </Form.Group>
             <Button variant="dark" type="submit">
-              Submit
+              Update
             </Button>
             <Button className="mx-2" variant="danger" type="reset">
               Reset
@@ -65,4 +65,4 @@ class AddContact extends React.Component {
     );
   }
 }
-export default AddContact;
+export default EditContact;

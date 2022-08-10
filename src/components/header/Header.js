@@ -24,6 +24,9 @@ function Header() {
                <Link  className="p-2" to="/comments">Comments</Link>
                <Link className="p-2" to="/search">Search</Link>
                <Link  className="p-2" to="/form">Form</Link>
+               <Link  className="p-2" to="/add">Add</Link>
+               <Link  className="p-2" to="/edit">Edit</Link>
+              
             </nav>
           </Nav>
           <Form className="d-flex">

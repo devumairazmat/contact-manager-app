@@ -7,9 +7,10 @@ import AddContact from "../components/addContact/AddContact";
 import ContactList from "../components/contactList/ContactList";
 import Header from "../components/header/Header";
 import api from "../api/contacts";
+import EditContact from "../components/editContact/EditContact";
 
 
-function Contact() {
+function Contact(props) {
   const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
 
@@ -27,6 +28,12 @@ function Contact() {
     const response = api.post("/contacts", reqest);
     setContacts([...contacts, response.data]);
   };
+
+  const updateContactHandler = async (contact) => {
+    const response = await api.put(`/contacts/${contact.id}`, contact);
+    console.log(response.data);
+  }
+
 
   const removeContactHandler = async (id) => {
     await api.delete(`/contacts/${id}`);
@@ -57,7 +64,8 @@ function Contact() {
       <Header />
       <hr />
       <Container>
-        <AddContact addContactHandler={addContactHandler} />
+        <AddContact {...props} addContactHandler={addContactHandler} />
+        <EditContact {...props} updateContactHandler={updateContactHandler} />  
         <ContactList contacts={contacts} getContactId={removeContactHandler} />
       </Container>
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTrashAlt, FaRegEdit, FaUserCircle } from "react-icons/fa";
 import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 
 const ContactCard = (props) => {
   // console.log(props);
@@ -26,7 +27,9 @@ const ContactCard = (props) => {
                 style={{ color: "red" }}
                 onClick={() => props.clickHandler(id)}
               />{" "}
-              <FaRegEdit className="mx-2" />
+              <Link to={{ pathname: `/contacts/${id}`, state :{contact:props.contact} }} >
+               <FaRegEdit className="mx-2" style={{ color: "blue" }}
+               /></Link>
             </td>
           </tr>
         </tbody>

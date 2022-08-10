@@ -8,8 +8,10 @@ import Development from "./pages/Development";
 import Contact from "./pages/Contact";
 import SearchBar from "./pages/SearchBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import EditContact from "./components/editContact/EditContact";
+import AddContact from "./components/addContact/AddContact";
 
-function App() {
+function App(props) {
   const comment = [
     {
       id: 1,
@@ -52,6 +54,8 @@ function App() {
           <Route path="/comments" element={<Comments comment={comment} />} />
           <Route path="/search" element={<SearchBar />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/add"  element={<AddContact />} />
+          <Route path="/"   element={<EditContact />} />
         </Routes>
       </BrowserRouter>
 
