@@ -7,6 +7,7 @@ import AddContact from "../components/addContact/AddContact";
 import ContactList from "../components/contactList/ContactList";
 import Header from "../components/header/Header";
 
+
 function Contact() {
   const LOCAL_STORAGE_KEY = "contacts";
   const [contacts, setContacts] = useState([]);
