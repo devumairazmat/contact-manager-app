@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Container } from "reactstrap";
 import AddContact from "../components/addContact/AddContact";
 import ContactList from "../components/contactList/ContactList";
@@ -6,27 +7,18 @@ import Header from "../components/header/Header";
 
 
 function Contact() {
-    const contact = [
-        {
-            id: "1",
-            name: "John Doe",
-            email: "john.doe@gmail.com",
-            phone: "123456890"
-        },
-        {
-            id: "2",
-            name: "Dev Umair",
-            email: "umair@gmail.com",
-            phone: "123456890"
-        }
-    ]
+  const [contacts, setContact] = useState([]);
+  
+  const addContactHandler = (contact) => {
+    setContact([...contacts, contact]);
+  }
   return (
     <>
       <Header />
       <hr />
       <Container>
-        <AddContact />
-        <ContactList contact={contact} />
+        <AddContact  addContactHandler={addContactHandler} />
+        <ContactList contact={contacts} />
       </Container>
     </>
   );
